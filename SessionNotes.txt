@@ -1,0 +1,129 @@
+Attendance Link : https://bit.ly/3aYRavg
+
+Virtual Course Link
+ :https://bit.ly/3aX8u3J
+
+JS Link :https://zensar-my.sharepoint.com/:f:/p/vranda_daga/Ei3QsfSJP_xGsiEMT1oeQP0BbSvW3zmvCPxMkhKtawrEUg?e=sFoWfx
+
+
+Angular 2
+Routing module 3.0
+Angular 3.0 Never Introduced
+Angular 4,5,6,7,8,9
+
+1. Node.js
+ 2. Angular CLI installed
+3. Visual Studio Code -editor
+4. Typescript  - is superset of JS
+
+YARN is package manager developed by facebook
+
+
+   ^3.0.0  -- 3.9.12
+   ~3.0.0  -- 3.0.12
+    3.0.0  -- Exact version	
+	1st num is called Major
+	2nd num is called Minor
+	3rd numis called  Path
+
+
+Bootstrapping in angular
+	1. deciding which is start up module   --main.ts file
+	2. Deciding which is your start up component
+		a  the class name of the start up component is mentioned in the bootstrap array of AppModule 
+		b  The selector property of the start up component is mentioned in index.html file
+
+Decorator -the decorator decides what that object is going to be
+   @Component({
+
+     })
+
+
+-------------------DAY2----------------------------------------------
+
+		@Decorator({
+			})
+//The above is general syntax of any decorator
+
+		@Component({})
+		@NgModule({
+
+		declarations:[]  //all component class name
+		bootstrap:[]  //The class name of the root component
+			})
+
+
+
+directives enahance the html
+Element directives -- All components are element directives
+		attribute directives  
+		class directives  <h1 class=""
+
+	one way binding using property binding syntax  []
+	event binding is also one way binding  (click)="method()" 
+
+		Two - way binding  [()] : Two way binding syntax - "bannana in a box syntax"
+
+
+		Two way binding can be used only on the following hTML tags/elements
+			1. all input elements
+			2. Textarea 
+			3. select - dropdownlist
+
+
+Component Life cycle Hook Methods
+		
+1.ngOnInit():void{}
+
+
+PIPES == in angular pipes are used to filter ot modify the data
+
+
+----------------Day3-------------------------
+@ViewChild()  and @ViewChildren decorator
+custom pipe
+nested components : @Input() and @Output() decorators
+
+		
+	<div id="mydiv" class="myClass"></div> --DOM
+	<div class="myClass"></div>
+			In JS
+	let div = document.getElementById('myDiv')
+	div.style.backgroudColor='red'
+	div.onclick=function(){.....}
+let allDiv=document.getEmentsByClassName('myClass')
+
+LR-234
+	@Input() - this decorator is used to pass data from parent to Child
+		this decorator will be used to pass data from ProductListComponent to CriteriaComponent
+		to pass data from parent to child we use property binding syntax, i.e []	
+
+
+	To communicate from child to parent
+	1. @Output() decorator
+	2. event binding
+
+	@Output() test
+	<app-crietria (valueChange)="onValueChange($event)" (click)="toggleImg()"></app-criteria>
+
+
+
+		CriteriaComponent.ts
+		set listFilter(value:string){
+
+		this.valueChange.emit(value)
+		}
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
